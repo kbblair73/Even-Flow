@@ -1,126 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Even Flow Power Wash</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Even Flow Power Wash</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 
-<style>
-:root {
-  --navy: #1a2a52;
-  --navy-deep: #14203d;
-  --royal: #5b8fd9;
-  --orange: #e88a2a;
-  --white: #ffffff;
-}
+  <style>
+    :root {
+      --navy: #1a2a52;
+      --navy-deep: #14203d;
+      --royal: #5b8fd9;
+      --orange: #e88a2a;
+      --white: #ffffff;
+    }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-body {
-  font-family: 'Open Sans', sans-serif;
-  background: var(--navy-deep);
-  color: var(--white);
-  overflow-x: hidden;
-}
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--navy-deep);
+      color: var(--white);
+      overflow-x: hidden;
+    }
 
-/* ================= PARALLAX (PATCHED) ================= */
-.parallax-section {
-  position: relative;
-  overflow: hidden;
-  background-image: url(data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/);
-  background-size: cover;
-  background-position: center;
-  padding: 4rem 2rem;
-  text-align: center;
-}
+    section {
+      padding: 4rem 2rem;
+    }
 
-.parallax-section::before {
-  content: "";
-  position: absolute;
-  inset: -20% 0;
-  background-image: inherit;
-  background-size: cover;
-  background-position: center;
-  transform: translateY(var(--parallax-offset, 0));
-  will-change: transform;
-  z-index: 0;
-}
+    /* ================= PARALLAX (iOS SAFE) ================= */
 
-.parallax-section::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(20, 32, 61, 0.5);
-  z-index: 1;
-}
+    .parallax-section {
+      position: relative;
+      overflow: hidden;
+      background-image: url(data:image/png;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/); /* YOUR ORIGINAL IMAGE */
+      background-size: cover;
+      background-position: center;
+      text-align: center;
+    }
 
-.parallax-text {
-  position: relative;
-  z-index: 2;
-  max-width: 600px;
-  margin: 0 auto;
-}
+    .parallax-section::before {
+      content: "";
+      position: absolute;
+      inset: -20% 0;
+      background-image: inherit;
+      background-size: cover;
+      background-position: center;
+      transform: translateY(var(--parallax-offset, 0));
+      will-change: transform;
+      z-index: 0;
+    }
 
-.parallax-text h2 {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-}
+    .parallax-section::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(20, 32, 61, 0.55);
+      z-index: 1;
+    }
 
-.parallax-text p {
-  opacity: 0.85;
-}
+    .parallax-text {
+      position: relative;
+      z-index: 2;
+      max-width: 700px;
+      margin: 0 auto;
+    }
 
-/* ================= OTHER SECTIONS (UNCHANGED STRUCTURE) ================= */
-section { padding: 4rem 2rem; }
+    .parallax-text h2 {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
+      margin-bottom: 1rem;
+    }
 
-/* accessibility */
-@media (prefers-reduced-motion: reduce) {
-  .parallax-section::before {
-    transform: none !important;
-  }
-}
-</style>
+    .parallax-text p {
+      opacity: 0.85;
+      font-size: 1.05rem;
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      .parallax-section::before {
+        transform: none !important;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<section class="parallax-section">
-  <div class="parallax-text">
-    <h2>Professional • Reliable • Local</h2>
-    <p>Exterior cleaning done right</p>
-  </div>
-</section>
+  <!-- PARALLAX SECTION 1 -->
+  <section class="parallax-section">
+    <div class="parallax-text">
+      <h2>Professional • Reliable • Local</h2>
+      <p>Exterior cleaning done right</p>
+    </div>
+  </section>
 
-<section>
-  <p style="text-align:center">Content continues here exactly as before.</p>
-</section>
+  <!-- NORMAL CONTENT -->
+  <section>
+    <p style="text-align:center; opacity:0.8;">
+      Main content continues here exactly as before.
+    </p>
+  </section>
 
-<section class="parallax-section">
-  <div class="parallax-text">
-    <h2>Even Flow Power Wash</h2>
-    <p>Serving Cape Girardeau & surrounding areas</p>
-  </div>
-</section>
+  <!-- PARALLAX SECTION 2 -->
+  <section class="parallax-section">
+    <div class="parallax-text">
+      <h2>Even Flow Power Wash</h2>
+      <p>Serving Cape Girardeau & surrounding areas</p>
+    </div>
+  </section>
 
-<script>
-const parallaxSections = document.querySelectorAll('.parallax-section');
+  <script>
+    const parallaxSections = document.querySelectorAll('.parallax-section');
 
-function updateParallax() {
-  const scrollY = window.pageYOffset;
-  parallaxSections.forEach(section => {
-    section.style.setProperty('--parallax-offset', `${scrollY * 0.3}px`);
-  });
-}
+    function updateParallax() {
+      const scrollY = window.pageYOffset;
 
-window.addEventListener('scroll', () => {
-  requestAnimationFrame(updateParallax);
-});
-</script>
+      parallaxSections.forEach(section => {
+        section.style.setProperty(
+          '--parallax-offset',
+          `${scrollY * 0.3}px`
+        );
+      });
+    }
+
+    window.addEventListener('scroll', () => {
+      requestAnimationFrame(updateParallax);
+    });
+  </script>
 
 </body>
 </html>

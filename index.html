@@ -34,27 +34,6 @@
     overflow-x: hidden;
   }
 
-  .top-bar {
-    background: var(--navy-deep);
-    padding: 0.5rem 2rem;
-    text-align: center;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 600;
-    font-size: 0.8rem;
-    letter-spacing: 0.05em;
-  }
-
-  .top-bar a, .top-bar span {
-    color: var(--white);
-    text-decoration: none;
-    opacity: 0.7;
-    transition: opacity 0.3s;
-  }
-
-  .top-bar a:hover {
-    opacity: 1;
-  }
-
   /* ── HERO ── */
   .hero {
     position: relative;
@@ -114,9 +93,12 @@
   .hero-location {
     font-family: 'Montserrat', sans-serif;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     color: var(--white);
-    opacity: 0.45;
+    opacity: 0.7;
+    letter-spacing: 0.05em;
+    text-align: center;
+    margin-top: 0rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
     margin-bottom: 1.75rem;
@@ -626,10 +608,6 @@
 <body>
 
 <!-- TOP BAR -->
-<div class="top-bar">
-  <span>Cape Girardeau, MO</span> &nbsp;•&nbsp; <a href="tel:5739796025">573-979-6025</a>
-</div>
-
 <!-- HERO — dark blue like back of card -->
 <section class="hero">
   <div class="hero-content">
@@ -639,6 +617,7 @@
       <h1 class="hero-brand">Even Flow<br>Power Wash</h1>
     </div>
     </div>
+    <p class="hero-location">Cape Girardeau, MO &nbsp;•&nbsp; <a href="tel:5739796025" style="color: var(--white); text-decoration: none;">573-979-6025</a></p>
   </div>
 
   <div class="wave-hero">
